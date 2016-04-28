@@ -1,9 +1,9 @@
 {{#if hasBlock}}
   {{yield message (action 'close')}}
 {{else}}
-  <a {{action 'close'}} class='close'>&times;</a>span
+  <a {{action 'close'}} class='close'>&times;</a>
   {{#if message.subject}}
-    <span class='subject'>{{message.subject}}{{{message.subjectHtml}}}</span>
+    <span class='subject'>{{message.subject}}</span>
   {{/if}}
   <span class='message'>{{message.text}}{{{message.html}}}</span>
   {{#if message.buttonText}}
