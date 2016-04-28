@@ -1,1 +1,6 @@
-{{yield message (action 'close')}}
+{{#if hasBlock}}
+  {{yield message (action 'close')}}
+{{else}}
+  <a {{action 'close'}} class='close'>&times;</a>
+  <span class='message'>{{message.text}}{{{message.html}}}</span>
+{{/if}}
