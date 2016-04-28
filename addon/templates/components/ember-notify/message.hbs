@@ -2,5 +2,7 @@
   {{yield message (action 'close')}}
 {{else}}
   <a {{action 'close'}} class='close'>&times;</a>
+  <span class='subject'>{{message.subject}}{{{message.subjectHtml}}}</span>
   <span class='message'>{{message.text}}{{{message.html}}}</span>
+  <button class='btn-primary btn' {{action message.buttonAction}}>{{message.buttonText}}</button>
 {{/if}}
