@@ -78,6 +78,13 @@ export default Ember.Component.extend({
         parentView.get('messages').removeObject(this.get('message'));
         this.set('message.visible', null);
       }
+    },
+    clickNotifyButton: function() {
+      var action = this.get('message.buttonAction');
+      var object = this.get('message.buttonTarget');
+      if(action) {
+        this.sendAction('clickNotifyButton', action, object);
+      }
     }
   }
 }).reopenClass({

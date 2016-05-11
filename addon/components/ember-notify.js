@@ -56,6 +56,11 @@ export default Ember.Component.extend({
     }
     this.get('messages').pushObject(message);
     return message;
+  },
+  actions: {
+    clickNotifyButton: function(action, object) {
+      this.sendAction('clickNotifyButton', action, object);
+    }
   }
 });
 

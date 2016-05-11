@@ -7,6 +7,6 @@
   {{/if}}
   <span class='message'>{{message.text}}{{{message.html}}}</span>
   {{#if message.buttonText}}
-    <button class='btn-primary btn' {{action message.buttonAction}}>{{message.buttonText}}</button>
+    <button class='btn-primary btn' {{action 'clickNotifyButton'}}>{{message.buttonText}}</button>
   {{/if}}
 {{/if}}
