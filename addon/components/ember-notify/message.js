@@ -85,6 +85,7 @@ export default Ember.Component.extend({
       if(action) {
         this.sendAction('clickNotifyButton', action, object);
       }
+      this.send('close');
     }
   }
 }).reopenClass({
